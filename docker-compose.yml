@@ -5,11 +5,4 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - /Users/bpa/Documents/Github/LLM_RAG/chromadb/chroma_data:/chroma/chroma
-    environment:
-      - IS_PERSISTENT=TRUE
-      - CHROMA_DB_IMPL=duckdb
-      - PERSIST_DIRECTORY=/chroma/chroma
-
-volumes:
-  chroma_data:
+      - ./chroma-data:/data
